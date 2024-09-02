@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<link href="style.css" rel="stylesheet" />
+		<link href="style-slideshow.css" rel="stylesheet" />
+		<link href="tooltip.css" rel="stylesheet" />
+		<link href="style-modal-split.css" rel="stylesheet" />
+		<meta
+			name="viewport"
+			content="width=1920, height=1080, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>Impress Magazine - Summer, 2024</title>
+		<link rel="icon" type="image/x-icon" href="nav-images/logo.png" />
+		<link id="favicon" rel="shortcut icon" href="nav-images/logo.png" />
+		<script type="text/javascript" src="scripts.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<div id="viewport">
+			<div id="container">
+				<!-- Left Menu -->
+
+				<div class="item sidebar sidebar-left">
+					<div class="item header header-left">
+						<form>
+							<!-- Change Impress button to Full Page button -->
+
+							<!-- <button class="menu-button clickable" type="submit" formaction="index.html" >
+                        <h6>Impress<br>Magazine</h6>
+                    </button> -->
+							<button
+								class="menu-button clickable"
+								type="button"
+								onclick="toggleFullScreen();"
+							>
+								<h5>
+									Impress<small><br />大きく・小さく</small>
+								</h5>
+							</button>
+						</form>
+					</div>
+
+					<div class="left-menu">
+						<div class="left-menu-button">
+							<a href="index.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/front.png"
+									alt="Link to Front Cover"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="1.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/1.png"
+									alt="Link to Page 1"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="1.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/2.png"
+									alt="Link to Page 2"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="3.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/3.png"
+									alt="Link to Page 3"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="3.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/4.png"
+									alt="Link to Page 4"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="5.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/5.png"
+									alt="Link to Page 5"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="5.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/6.png"
+									alt="Link to Page 6"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="cover.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/back.png"
+									alt="Link to Back Cover"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="about.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/about.png"
+							/></a>
+						</div>
+					</div>
+					<!-- Closing the left-menu div -->
+
+					<div class="item footer footer-left-top">
+						<form>
+							<button
+								class="menu-button-small clickable"
+								type="submit"
+								formaction="3.html"
+							>
+								<h6>&lt; Previous</h6>
+							</button>
+						</form>
+					</div>
+					<div class="item footer footer-left-bottom">
+						<form>
+							<button
+								class="menu-button-small clickable"
+								type="submit"
+								formaction="cover.html"
+							>
+								<h6>Next &gt;</h6>
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- Closing the sidebar div -->
+
+				<div class="item gap-left"></div>
+
+				<div
+					class="item content-center"
+					style="
+						background-image: url('Web/page056.jpg');
+						background-size: contain;
+						background-position: left;
+						background-attachment: local;
+						background-repeat: no-repeat;
+						background-color: #000000;
+					"
+				>
+					<div class="center-items">
+						<!-- Buttons -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio2-1', 'text2-1', 'play2-1')"
+							style="position: absolute; top: 21vw; left: 89vw"
+						>
+							<img
+								id="play2-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6>The Sweetest Teacher</h6>
+						</button>
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-1', 'text1-1', 'play1-1')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-1"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6>The Sweetest Dreams</h6>
+						</button>
+
+						<!-- Modal Text -->
+
+						<div class="items hidden-text" id="text2-1">
+							<!-- Modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+									<span
+										class="close clickable"
+										onClick="ResetPlayAndShow('audio2-1', 'text2-1', 'play2-1')"
+										>&times;</span
+									>
+									<span
+										class="modal-play clickable"
+										onClick="PlaySound('audio2-1', 'play2-1')"
+										><img
+											id="play2-1"
+											class="audio-button-image clickable"
+											src="nav-images/play-g79150a13d_1280.png"
+									/></span>
+								</div>
+
+								<div class="modal-body">
+									<h3>The Sweetest Teacher</h3>
+
+									<div class="modal-parent">
+										<div class="modal-right-side">
+											<p
+												style="
+													font-size: 2.9vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 1vh;
+													padding: 1vh;
+												"
+											>
+												There are many opportunities to communicate with friends
+												in English class. One of the benefits and fun aspects of
+												being in it is that you can ask questions, listen to
+												performances, talk to friends, and get to know them
+												better.
+											</p>
+											<p
+												style="
+													font-size: 2.9vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 1vh;
+													padding: 1vh;
+												"
+											>
+												I also think that through English lessons, we learn the
+												meaning and origin of words that we didn't know in the
+												past. Furthermore, it is good to gain an understanding
+												of another country's language and culture.
+											</p>
+											<p
+												style="
+													font-size: 2.9vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 1vh;
+													padding: 1vh;
+												"
+											>
+												Though I'm still not very good at English, I like it. I
+												want to be able to speak it more. I recently started
+												watching Korean drama with fascination that the thought
+												of learning Korean even crossed my mind. Truly, we have
+												an opportunity to  speak the language that we have
+												learned, and it feels good to use it to communicate even
+												only to some degree. I'm looking forward to having a fun
+												English learning activity with all of you.
+											</p>
+										</div>
+										<div class="modal-left-side">
+											<img
+												src="/Web/5/kazumi.JPG"
+												style="
+													width: 100%;
+													height: 100%;
+													object-fit: cover;
+													object-position: 100% 0;
+												"
+											/>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer"></div>
+							</div>
+						</div>
+
+						<div class="items hidden-text" id="text1-1">
+							<!-- Modal content -->
+							<div class="modal-content-slideshow">
+								<div class="modal-header">
+									<span
+										class="close clickable"
+										onClick="ResetPlayAndShow('audio1-1', 'text1-1', 'play1-1')"
+										>&times;</span
+									>
+								</div>
+
+								<div class="modal-body">
+									<!-- Add the image slideshow here -->
+									<div id="slideshow-container" class="slideshow-container">
+										<!-- Full-width images with number text -->
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/background.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="The Sweetest Dreams"
+												/>
+												<div class="caption-container">
+													<h4>The Sweetest Dreams</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														What do junior high school students in the USA and
+														in Japan want to be when they grow up? Are the
+														dreams the same, or are they different? What about
+														you?
+													</p>
+													<div class="numbertext">1 / 1 (23)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/_966b8552-de79-43d0-84e2-c056445cfea2.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="The Sweetest Dreams"
+												/>
+												<div class="caption-container">
+													<h4>Dreams of American Children</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														What do students in the USA want to be when they
+														grow up? <br /><br />This survey of 1,000 students
+														was conducted in 2022 by Ellie's Sparkle Show
+													</p>
+													<div class="numbertext">0 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/doctor.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Doctor/Nurse/Healthcare Professional
+													"
+												/>
+												<div class="caption-container">
+													<h4>
+														1. Doctor/Nurse/Healthcare Professional (26.2%)
+													</h4>
+													<p style="font-size: 2.5vh; line-height: 2">
+														Healthcare professionals help people stay healthy
+														and get better when they're sick. They include
+														doctors, nurses, and others who check on your
+														health, treat illnesses, and give advice on staying
+														healthy in both mind and body. They work in places
+														like hospitals, clinics, and doctor's offices. It's
+														tough, but these jobs are needed a lot.
+													</p>
+													<div class="numbertext">1 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/female.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Teacher"
+												/>
+												<div class="caption-container">
+													<h4>2. Teacher (16.5%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Teachers help students learn new things. They
+														explain subjects like math, reading, and science,
+														and make sure students understand. They also help
+														with homework, answer questions, and support
+														students in their studies.
+													</p>
+													<div class="numbertext">2 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/chemist.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Scientist"
+												/>
+												<div class="caption-container">
+													<h4>3. Scientist (12.0%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Scientists study how things work in the world. They
+														ask questions, do experiments, and look for answers
+														to learn more about things and solve problems. Some
+														famous scientists include Albert Einstein, Marie
+														Curie, Isaac Newton, and Charles Darwin.
+													</p>
+													<div class="numbertext">3 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/youtuber.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="TikToker/YouTuber/Vlogger
+													"
+												/>
+												<div class="caption-container">
+													<h4>4. TikToker / YouTuber / Vlogger (11.9%)</h4>
+													<p style="font-size: 2.5vh; line-height: 2">
+														TikTokers, YouTubers, and Vloggers create and share
+														photos and videos. They often dance, sing, or do
+														funny skits. They might make videos about gaming,
+														cooking, vlogs, or tutorials. They often share about
+														their daily lives, travel, fashion, or fitness. Some
+														famous TikTokers, YouTubers, and Instagrammers are
+														Zach King (magic tricks), MrBeast (big challenges
+														and giveaways), Kim Kardashian (fashion).
+													</p>
+													<div class="numbertext">4 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/casting.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Actor"
+												/>
+												<div class="caption-container">
+													<h4>5. Actor (10.9%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Actors perform in movies, TV shows, or plays. Some
+														famous actors are Tom Cruise (<i
+															>Mission: Impossible</i
+														>), Leonardo DiCaprio (<i>Titanic</i>), and Zendaya
+														(<i>Spider-Man</i>).
+													</p>
+													<div class="numbertext">5 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/policeman.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Police Officer"
+												/>
+												<div class="caption-container">
+													<h4>6. Police Officer (9.7%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Police officers help keep people safe and enforce
+														the law. They patrol neighborhoods, respond to
+														emergencies, and investigate crimes. They also help
+														people in trouble and make sure everyone follows the
+														rules.
+													</p>
+													<div class="numbertext">6 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/dancer.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Dancer"
+												/>
+												<div class="caption-container">
+													<h4>7. Dancer (9.7%)</h4>
+													<p style="font-size: 2.5vh; line-height: 2">
+														Dancers perform different types of dance, like
+														ballet, hip-hop, or contemporary, to entertain or
+														tell a story. They practice a lot to perfect their
+														moves and often perform on stage, in music videos,
+														or in competitions. Some famous dancers are Charli
+														D'Amelio, a TikTok star, JoJo Siwa, who started on
+														Dance Moms, and Kyle Hanagami, who creates dance
+														routines for popular songs.
+													</p>
+													<div class="numbertext">7 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/veterinarian.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Veterinarian"
+												/>
+												<div class="caption-container">
+													<h4>8. Veterinarian (9.1%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Veterinarians are doctors who take care of animals.
+														They help pets like dogs and cats, as well as farm
+														and zoo animals, by checking their health, giving
+														them medicine, and performing surgeries when needed.
+													</p>
+													<div class="numbertext">8 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/dentist.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Dentist or Dental Hygienist"
+												/>
+												<div class="caption-container">
+													<h4>9. Dentist or Dental Hygienist (6.7%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Dentists are doctors who take care of your teeth and
+														mouth. They fix problems like cavities, clean teeth,
+														and check for any issues. <br /><br />
+														Dental hygienists clean your teeth and check for any
+														signs of problems. They also teach you how to brush
+														and floss your teeth properly.<br /><br />Oops! We
+														made a mistake in the printed magazine (We switched
+														#9 and #10)!
+													</p>
+													<div class="numbertext">9 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/influencer.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Influencer"
+												/>
+												<div class="caption-container">
+													<h4>10. Influencer (5.6%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														An influencer is someone who has a lot of followers
+														on social media and can affect what people think,
+														buy, or do. They share content, like photos or
+														videos, to promote products or ideas, and people
+														often look up to them for recommendations and
+														trends. Some famous influencers are Kim Kardashian,
+														Kylie Jenner, and Cristiano Ronaldo.<br /><br />Oops!
+														We made a mistake in the printed magazine (We
+														switched #9 and #10)!
+													</p>
+													<div class="numbertext">10 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/_718970cb-c8ae-4b8b-b9c5-6381d19bf49b.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Dreams of Japanese Children"
+												/>
+												<div class="caption-container">
+													<h4>Dreams of Japanese Children</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														What do junior high school students in Japan want to
+														be when they grow up? <br /><br />This 2024 survey
+														of 657 students in Japan was conducted by Kuraray.
+													</p>
+													<div class="numbertext">0 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/trophy.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Athlete"
+												/>
+												<div class="caption-container">
+													<h4>1. Athlete (8.8%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Athletes train hard, but it's fun to play the sports
+														you love. Some famous athletes are LeBron James, a
+														basketball player, Simone Biles, a gymnast, Naomi
+														Osaka, a tennis player, Abe Hifumi, a judoka, and
+														Yui Kamiji, a wheelchair tennis player.
+													</p>
+													<div class="numbertext">1 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/doctor.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Doctor or Nurse"
+												/>
+												<div class="caption-container">
+													<h4>2. Doctor or Nurse (5.3%)</h4>
+													<p style="font-size: 2.7vh; line-height: 2">
+														Doctors and nurses help people stay healthy and
+														treat them when they are sick. They also give advice
+														on how to prevent illnesses and manage your health.
+														One famous doctor from Japan is Dr. Shinya Yamanaka,
+														who won the Nobel Prize for his work in stem cell
+														research.
+													</p>
+													<div class="numbertext">2 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/female.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Teacher"
+												/>
+												<div class="caption-container">
+													<h4>3. Teacher (4.9%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Teachers help students learn new things. They
+														explain subjects, give assignments, and help with
+														problems. They also support students in their
+														studies and encourage them to do their best.
+													</p>
+													<div class="numbertext">3 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/artist.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Animator or Illustrator"
+												/>
+												<div class="caption-container">
+													<h4>4. Animator or Illustrator (4.7%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Animators make moving pictures for movies, TV shows,
+														or video games. Illustrators draw pictures for
+														books, magazines, and other things. Some famous
+														Japanese examples are Hayao Miyazaki (of
+														<i>Studio Ghibli</i>) and Hiromu Arakawa (<i
+															>Full Metal Alchemist</i
+														>).
+													</p>
+													<div class="numbertext">4 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/chemist.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Scientist"
+												/>
+												<div class="caption-container">
+													<h4>5. Scientist (3.8%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Scientists study the world around us to understand
+														how things work. They ask questions, do experiments,
+														and look for answers to solve problems and improve
+														our lives. One famous Japanese scientist is Hideki
+														Yukawa, Japan's first Nobel Prize winner.
+													</p>
+													<div class="numbertext">5 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/pharmacist.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Pharmacist"
+												/>
+												<div class="caption-container">
+													<h4>6. Pharmacist (3.0%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Pharmacists help people by giving out medicine and
+														explaining how to use it safely. They make sure the
+														medicines are correct and can offer advice on how to
+														take them and any side effects.
+													</p>
+													<div class="numbertext">6 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/zookeeper.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Zookeeper or Theme Park Worker"
+												/>
+												<div class="caption-container">
+													<h4>7. Zookeeper or Theme Park Worker (3.0%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Zookeepers take care of animals in zoos. They also
+														help with animal training and educate visitors about
+														the animals.<br /><br />
+														Theme Park Workers help guests at amusement parks
+														and theme parks. They make sure that everyone has a
+														fun and safe experience.
+													</p>
+													<div class="numbertext">7 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/baker.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Patisserie"
+												/>
+												<div class="caption-container">
+													<h4>8. Patisserie (3.0%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Pastry Chefs make delicious baked goods like cakes,
+														cookies, and pastries. They mix ingredients, bake
+														treats, and decorate them to make them look and
+														taste great.
+													</p>
+													<div class="numbertext">8 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/software-engineer.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="IT Engineer"
+												/>
+												<div class="caption-container">
+													<h4>9. IT Engineer (2.9%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														IT Engineers keep our computer systems running and
+														build internet infrastructure.
+													</p>
+													<div class="numbertext">9 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/4/social-worker.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Healthcare Worker"
+												/>
+												<div class="caption-container">
+													<h4>10. Healthcare Worker (2.7%)</h4>
+													<p style="font-size: 2.8vh; line-height: 2">
+														Healthcare workers include doctors, nurses, and
+														social workers.
+													</p>
+													<div class="numbertext">10 / 10 (23)</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Navigation buttons -->
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+										<br />
+									</div>
+									<div class="modal-footer"></div>
+
+									<!-- Thumbnails -->
+									<div class="thumbnail-container">
+										<img
+											class="thumbnail"
+											src="Web/4/background.png"
+											alt="The Sweetest Dreams"
+											onclick="currentSlide(1)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/_966b8552-de79-43d0-84e2-c056445cfea2.jpg"
+											alt="Dreams of American Children"
+											onclick="currentSlide(2)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/doctor.png"
+											alt="Doctor/Nurse/Healthcare Professional"
+											onclick="currentSlide(3)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/female.png"
+											alt="Teacher"
+											onclick="currentSlide(4)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/chemist.png"
+											alt="Scientist"
+											onclick="currentSlide(5)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/youtuber.png"
+											alt="TikToker / YouTuber / Vlogger"
+											onclick="currentSlide(6)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/casting.png"
+											alt="Actor"
+											onclick="currentSlide(7)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/policeman.png"
+											alt="Police Officer"
+											onclick="currentSlide(8)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/dancer.png"
+											alt="Dancer"
+											onclick="currentSlide(9)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/veterinarian.png"
+											alt="Veterinarian"
+											onclick="currentSlide(10)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/dentist.png"
+											alt="Dentist or Dental Hygienist"
+											onclick="currentSlide(11)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/influencer.png"
+											alt="Influencer"
+											onclick="currentSlide(12)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/_718970cb-c8ae-4b8b-b9c5-6381d19bf49b.jpg"
+											alt="Dreams of Japanese Children"
+											onclick="currentSlide(13)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/trophy.png"
+											alt="Athlete"
+											onclick="currentSlide(14)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/doctor.png"
+											alt="Doctor or Nurse"
+											onclick="currentSlide(15)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/female.png"
+											alt="Teacher"
+											onclick="currentSlide(16)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/artist.png"
+											alt="Animator or Illustrator"
+											onclick="currentSlide(17)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/chemist.png"
+											alt="Scientist"
+											onclick="currentSlide(18)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/pharmacist.png"
+											alt="Pharmacist"
+											onclick="currentSlide(19)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/zookeeper.png"
+											alt="Zookeeper or Theme Park Worker"
+											onclick="currentSlide(20)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/baker.png"
+											alt="Patisserie"
+											onclick="currentSlide(21)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/software-engineer.png"
+											alt="IT Engineer"
+											onclick="currentSlide(22)"
+										/>
+
+										<img
+											class="thumbnail"
+											src="Web/4/social-worker.png"
+											alt="Healthcare Worker"
+											onclick="currentSlide(23)"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- Audio -->
+
+							<audio id="audio1-1" class="playondemand">
+								<source src="./audio/audio3-1.mp3" type="audio/mp3" />
+							</audio>
+							<audio id="audio2-1" class="playondemand">
+								<source src="./audio/audio3-2.mp3" type="audio/mp3" />
+							</audio>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Closing the container div -->
+		</div>
+		<!-- Closing the viewport div -->
+
+		<script type="text/javascript" src="scripts-slideshow.js"></script>
+	</body>
+</html>

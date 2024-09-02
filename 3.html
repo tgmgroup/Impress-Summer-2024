@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<link href="style.css" rel="stylesheet" />
+		<link href="style-slideshow.css" rel="stylesheet" />
+		<link href="tooltip.css" rel="stylesheet" />
+		<link href="style-modal-split.css" rel="stylesheet" />
+		<meta
+			name="viewport"
+			content="width=1920, height=1080, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>Impress Magazine - Summer, 2024</title>
+		<link rel="icon" type="image/x-icon" href="nav-images/logo.png" />
+		<link id="favicon" rel="shortcut icon" href="nav-images/logo.png" />
+		<script type="text/javascript" src="scripts.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<div id="viewport">
+			<div id="container">
+				<!-- Left Menu -->
+
+				<div class="item sidebar sidebar-left">
+					<div class="item header header-left">
+						<form>
+							<!-- Change Impress button to Full Page button -->
+
+							<!-- <button class="menu-button clickable" type="submit" formaction="index.html" >
+                        <h6>Impress<br>Magazine</h6>
+                    </button> -->
+							<button
+								class="menu-button clickable"
+								type="button"
+								onclick="toggleFullScreen();"
+							>
+								<h5>
+									Impress<small><br />大きく・小さく</small>
+								</h5>
+							</button>
+						</form>
+					</div>
+
+					<div class="left-menu">
+						<div class="left-menu-button">
+							<a href="index.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/front.png"
+									alt="Link to Front Cover"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="1.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/1.png"
+									alt="Link to Page 1"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="1.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/2.png"
+									alt="Link to Page 2"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="3.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/3.png"
+									alt="Link to Page 3"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="3.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/4.png"
+									alt="Link to Page 4"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="5.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/5.png"
+									alt="Link to Page 5"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="5.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/6.png"
+									alt="Link to Page 6"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="cover.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/back.png"
+									alt="Link to Back Cover"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="about.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/about.png"
+							/></a>
+						</div>
+					</div>
+					<!-- Closing the left-menu div -->
+
+					<div class="item footer footer-left-top">
+						<form>
+							<button
+								class="menu-button-small clickable"
+								type="submit"
+								formaction="1.html"
+							>
+								<h6>&lt; Previous</h6>
+							</button>
+						</form>
+					</div>
+					<div class="item footer footer-left-bottom">
+						<form>
+							<button
+								class="menu-button-small clickable"
+								type="submit"
+								formaction="5.html"
+							>
+								<h6>Next &gt;</h6>
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- Closing the sidebar div -->
+
+				<div class="item gap-left"></div>
+
+				<div
+					class="item content-center"
+					style="
+						background-image: url('Web/page034.jpg');
+						background-size: contain;
+						background-position: left;
+						background-attachment: local;
+						background-repeat: no-repeat;
+						background-color: #000000;
+					"
+				>
+					<div class="center-items">
+						<!-- Buttons -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6>Introduction</h6>
+						</button>
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio2-0', 'text2-0', 'play2-0')"
+							style="position: absolute; top: 21vw; left: 89vw"
+						>
+							<img
+								id="play2-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6>Challenge</h6>
+						</button>
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio3-1', 'text3-1', 'play3-1')"
+							style="position: absolute; top: 13vw; left: 89vw"
+						>
+							<img
+								id="play3-1"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6>Gallery</h6>
+						</button>
+
+						<!-- Modal Text -->
+
+						<div class="items hidden-text" id="text1-0">
+							<!-- Modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+									<span
+										class="close clickable"
+										onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+										>&times;</span
+									>
+									<span
+										class="modal-play clickable"
+										onClick="PlaySound('audio1-0', 'play1-0')"
+										><img
+											id="play1-0"
+											class="audio-button-image clickable"
+											src="nav-images/play-g79150a13d_1280.png"
+									/></span>
+								</div>
+
+								<div class="modal-body">
+									<h3>The World's Hardest Desserts</h3>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										Ice cream.
+										<span class="tooltip"
+											>Meringue<span class="tooltiptext"
+												>メレンゲ: a kind of food made from whipped egg
+												whites</span
+											></span
+										>. Cake. Each of these foods is delicious. Put them
+										together, and it becomes Baked Alaska, an
+										<span class="tooltip"
+											>incredible<span class="tooltiptext"
+												>素晴らしい: great, amazing</span
+											></span
+										>
+										dessert first made in 1867. That’s the year the USA bought
+										Alaska from Russia.
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										To make Baked Alaska, you start with a layer of sponge cake.
+										You put ice cream on top. You
+										<span class="tooltip"
+											>whip<span class="tooltiptext"
+												>泡立てる: to beat, to mix</span
+											></span
+										>
+										egg whites and sugar into meringue and put that all around
+										your ice cream and cake. Then you bake that in a very hot
+										oven for five minutes. If you do it right, you’ll have an
+										amazing combination of hot,
+										<span class="tooltip"
+											>crispy<span class="tooltiptext"
+												>サクサク: crunchy
+												<i>(like in good fried chicken)</i></span
+											></span
+										>
+										meringue,
+										<span class="tooltip"
+											>fluffy<span class="tooltiptext"
+												>ふわふわ: light, full of air <i>(like bread)</i></span
+											></span
+										>
+										cake, and cold ice cream.
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										It sounds easy, but Baked Alaska is actually one of the most
+										difficult desserts to make in the world. The cake can be too
+										<span class="tooltip"
+											>dry<span class="tooltiptext"
+												>乾いた: having no water</span
+											></span
+										>
+										or too
+										<span class="tooltip"
+											>wet<span class="tooltiptext"
+												>濡れた: full of water</span
+											></span
+										>. The meringue can be too soft. And the ice cream
+										<span class="tooltip"
+											>melts<span class="tooltiptext"
+												>溶ける: like when ice becomes water</span
+											></span
+										>
+										very quickly! It’s very easy to make a sweet but
+										<span class="tooltip"
+											>disappointing<span class="tooltiptext"
+												>残念な: something that makes you sad</span
+											></span
+										>
+										<span class="tooltip"
+											>mess<span class="tooltiptext"
+												>失敗作 (台無し、乱雑): something that is difficult or
+												dirty</span
+											></span
+										>
+										when you make Baked Alaska. This is why it is a challenge
+										for bakers of all skills.
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										The world is full of difficult desserts, including baklava,
+										pavlova, macaroons, soufflés, baumkuchen, and croquembouche.
+										What do you think? Would you like to try making some of
+										these difficult, delicious desserts?
+									</p>
+								</div>
+								<div class="modal-footer"></div>
+							</div>
+						</div>
+
+						<div class="items hidden-text" id="text2-0">
+							<!-- Modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+									<span
+										class="close clickable"
+										onClick="ResetPlayAndShow('audio2-0', 'text2-0', 'play2-0')"
+										>&times;</span
+									>
+									<span
+										class="modal-play clickable"
+										onClick="PlaySound('audio2-0', 'play2-0')"
+										><img
+											id="play2-0"
+											class="audio-button-image clickable"
+											src="nav-images/play-g79150a13d_1280.png"
+									/></span>
+								</div>
+
+								<div class="modal-body">
+									<h3>
+										Baked Alaska Challenge: Let's try making Baked Alaska!
+									</h3>
+
+									<div class="modal-parent">
+										<div class="modal-left-side">
+											<h4>Ingredients</h4>
+											<p
+												style="font-size: 2.5vh; text-align: left; margin: 1vh"
+											>
+												1. 1.5 kg of ice cream<br /><br />
+												2. 450 grams of pound cake<br /><br />
+												3. 6 egg whites<br /><br />
+												4. 150 grams of sugar<br /><br />
+												5. 4 mL of cream of tartar<br /><br /><br />
+											</p>
+											<p
+												style="
+													font-size: 2.8vh;
+													text-align: left;
+													margin: 1vh;
+													text-align: center;
+												"
+											>
+												Read the whole recipe at
+												<a
+													href="https://www.spendwithpennies.com/easy-baked-alaska/"
+													target="bakedalaska"
+													style="color: #290098"
+													>SpendWithPennies</a
+												>!
+											</p>
+										</div>
+										<div class="modal-right-side">
+											<h4>Instructions</h4>
+											<p
+												style="
+													font-size: 2.5vh;
+													text-align: left;
+													padding: 0 0 0 1vh;
+												"
+											>
+												1. Cut pound cake into 3-cm thick slices. Put the slices
+												into a large bowl. Freeze the bowl and cake.
+											</p>
+											<p
+												style="
+													font-size: 2.5vh;
+													text-align: left;
+													padding: 0 0 0 1vh;
+												"
+											>
+												2. Scoop some ice cream onto the cake in the bowl. Push
+												down on the ice cream so it sticks on the cake. Freeze
+												it again.
+											</p>
+											<p
+												style="
+													font-size: 2.5vh;
+													text-align: left;
+													padding: 0 0 0 1vh;
+												"
+											>
+												3. Put the egg whites and cream of tartar in a bowl.
+												Beat it with a mixer for about three minutes. Add sugar
+												little by little and beat until it gets a little hard.
+											</p>
+											<p
+												style="
+													font-size: 2.5vh;
+													text-align: left;
+													padding: 0 0 0 1vh;
+												"
+											>
+												4. Cover the ice cream and pound cake with meringue.
+												Freeze it again.
+											</p>
+											<p
+												style="
+													font-size: 2.5vh;
+													text-align: left;
+													padding: 0 0 0 1vh;
+												"
+											>
+												5. Bake the Baked Alaska in a hot oven at 260 degrees
+												Celsius for 3 to 5 minutes. Take it out when the
+												meringue is light brown.
+											</p>
+											<p
+												style="
+													font-size: 2.5vh;
+													text-align: left;
+													padding: 0 0 0 1vh;
+												"
+											>
+												6. Let it rest for 5 minutes, then cut it and enjoy! If
+												you did it right, it will be crispy, creamy, hot, cold,
+												and delicious.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer"></div>
+							</div>
+						</div>
+
+						<div class="items hidden-text" id="text3-1">
+							<!-- Modal content -->
+							<div class="modal-content-slideshow">
+								<div class="modal-header">
+									<span
+										class="close clickable"
+										onClick="ResetPlayAndShow('audio3-1', 'text3-1', 'play3-1')"
+										>&times;</span
+									>
+								</div>
+
+								<div class="modal-body">
+									<!-- Add the image slideshow here -->
+									<div id="slideshow-container" class="slideshow-container">
+										<!-- Full-width images with number text -->
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/3/bakedalaska1.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Baked Alaska"
+												/>
+												<div class="caption-container">
+													<h4>Baked Alaska</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Baked Alaska was first made to celebrate the USA's
+														purchase of Alaska from Russia in 1867.
+													</p>
+													<div class="numbertext">1 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/3/bakedalaska2.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Baked Alaska"
+												/>
+												<div class="caption-container">
+													<h4>Baked Alaska</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Baked Alaska is made from layers of ice cream and
+														sponge cake and covered with meringue, or whipped
+														egg whites. Meringue is also used in French macarons
+														and Pavlova desserts.
+													</p>
+													<div class="numbertext">2 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/3/bakedalaska3.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Baked Alaska"
+												/>
+												<div class="caption-container">
+													<h4>Baked Alaska</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														When the dessert is heated, the meringue outside
+														protects the ice cream inside. It becomes crispy and
+														hot, but the ice cream stays cold and delicious.
+													</p>
+													<div class="numbertext">3 / 9</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/3/baklava.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Baklava"
+												/>
+												<div class="caption-container">
+													<h4>Baklava</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Baklava is a dessert from Turkey (Türkiye). It is
+														made of sweet layers of light pastry and crunchy
+														nuts. It is difficult to make because of the filo
+														pastry it uses. Filo pastry is made with very thing
+														layers of dough brushed with butter.
+													</p>
+													<div class="numbertext">4 / 9</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/3/pavlova.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Pavlova"
+												/>
+												<div class="caption-container">
+													<h4>Pavlova</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Pavlova is a meringue cake with a crisp outside and
+														soft inside. Some people say it's from Australia,
+														and some people say it's from New Zealand. This
+														dessert was made for the dancer Anna Pavlova when
+														she came to tour the two countries.
+													</p>
+													<div class="numbertext">5 / 9</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/3/macaron.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Macaron"
+												/>
+												<div class="caption-container">
+													<h4>Macaron</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Macarons are meringue cookies sandwiching cream or
+														jam. These French desserts are made from whipped egg
+														whites.
+													</p>
+													<div class="numbertext">6 / 9</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/3/souffle.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Souffle"
+												/>
+												<div class="caption-container">
+													<h4>Souffle</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														A souffle is a baked dish of sweet and fluffy
+														whipped eggs from France, a little like custard.
+														They can also be salty and savory instead of sweet.
+													</p>
+													<div class="numbertext">7 / 9</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/3/baumkuchen.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Baumkuchen"
+												/>
+												<div class="caption-container">
+													<h4>Baumkuchen</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Baumkuchen are German desserts made of layers and
+														layers of cake. Each layer is added and baked as it
+														is turned around a spit in a special oven. It takes
+														a long, long time!
+													</p>
+													<div class="numbertext">8 / 9</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/3/croquembouche.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Croquembouche"
+												/>
+												<div class="caption-container">
+													<h4>Croquembouche</h4>
+													<p style="font-size: 3vh; line-height: 1.5">
+														Croquembouche is a French dessert. It is a tower of
+														choux crème puffs and caramel threads. It is also
+														very difficult to make choux crème puffs well.
+													</p>
+													<div class="numbertext">9 / 9</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Navigation buttons -->
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+										<br />
+									</div>
+									<div class="modal-footer"></div>
+
+									<!-- Thumbnails -->
+									<div class="thumbnail-container">
+										<img
+											class="thumbnail"
+											src="/Web/3/bakedalaska1.jpg"
+											alt="Baked Alaska"
+											onclick="currentSlide(1)"
+										/>
+										<img
+											class="thumbnail"
+											src="/Web/3/bakedalaska2.jpg"
+											alt="Baked Alaska"
+											onclick="currentSlide(2)"
+										/>
+										<img
+											class="thumbnail"
+											src="/Web/3/bakedalaska3.jpg"
+											alt="Baked Alaska"
+											onclick="currentSlide(3)"
+										/>
+										<img
+											class="thumbnail"
+											src="/Web/3/baklava.jpg"
+											alt="Baklava"
+											onclick="currentSlide(4)"
+										/>
+										<img
+											class="thumbnail"
+											src="/Web/3/pavlova.jpg"
+											alt="Pavlova"
+											onclick="currentSlide(5)"
+										/>
+										<img
+											class="thumbnail"
+											src="/Web/3/macaron.jpg"
+											alt="Macaron"
+											onclick="currentSlide(6)"
+										/>
+										<img
+											class="thumbnail"
+											src="/Web/3/souffle.jpg"
+											alt="Soufflé"
+											onclick="currentSlide(7)"
+										/>
+										<img
+											class="thumbnail"
+											src="/Web/3/baumkuchen.jpg"
+											alt="Baumkuchen"
+											onclick="currentSlide(8)"
+										/>
+										<img
+											class="thumbnail"
+											src="/Web/3/croquembouche.jpg"
+											alt="Croquembouche"
+											onclick="currentSlide(9)"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- Audio -->
+
+							<audio id="audio1-0" class="playondemand">
+								<source src="./audio/audio3-1.mp3" type="audio/mp3" />
+							</audio>
+							<audio id="audio2-0" class="playondemand">
+								<source src="./audio/audio3-2.mp3" type="audio/mp3" />
+							</audio>
+							<audio id="audio3-1" class="playondemand">
+								<source src="./audio/audio3-3.mp3" type="audio/mp3" />
+							</audio>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Closing the container div -->
+		</div>
+		<!-- Closing the viewport div -->
+
+		<script type="text/javascript" src="scripts-slideshow.js"></script>
+	</body>
+</html>

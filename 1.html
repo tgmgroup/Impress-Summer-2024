@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<link href="style.css" rel="stylesheet" />
+		<link href="style-slideshow.css" rel="stylesheet" />
+		<link href="style-canvas.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<meta
+			name="viewport"
+			content="width=1920, height=1080, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<title>Impress Magazine - Summer, 2024</title>
+		<link rel="icon" type="image/x-icon" href="nav-images/logo.png" />
+		<link id="favicon" rel="shortcut icon" href="nav-images/logo.png" />
+		<script type="text/javascript" src="scripts.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+	</head>
+
+	<body>
+		<div id="viewport">
+			<div id="container">
+				<!-- Your website content goes here -->
+
+				<div class="item sidebar sidebar-left">
+					<div class="item header header-left">
+						<form>
+							<!-- <button class="menu-button clickable" type="submit" formaction="index.html" >
+                        <h6>Impress<br>Magazine</h6>
+                    </button> -->
+							<button
+								class="menu-button clickable"
+								type="button"
+								onclick="toggleFullScreen();"
+							>
+								<h5>
+									Impress<small><br />大きく・小さく</small>
+								</h5>
+							</button>
+						</form>
+					</div>
+
+					<div class="left-menu">
+						<div class="left-menu-button">
+							<a href="index.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/front.png"
+									alt="Link to Front Cover"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="1.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/1.png"
+									alt="Link to Page 1"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="1.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/2.png"
+									alt="Link to Page 2"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="3.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/3.png"
+									alt="Link to Page 3"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="3.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/4.png"
+									alt="Link to Page 4"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="5.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/5.png"
+									alt="Link to Page 5"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="5.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/6.png"
+									alt="Link to Page 6"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="cover.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/back.png"
+									alt="Link to Back Cover"
+							/></a>
+						</div>
+						<div class="left-menu-button">
+							<a href="about.html" target="_self"
+								><img
+									class="left-menu-image clickable"
+									src="nav-images/about.png"
+							/></a>
+						</div>
+					</div>
+					<!-- Closing the left-menu div -->
+
+					<div class="item footer footer-left-top">
+						<form>
+							<button
+								class="menu-button-small clickable"
+								type="submit"
+								formaction="index.html"
+							>
+								<h6>&lt; Previous</h6>
+							</button>
+						</form>
+					</div>
+					<div class="item footer footer-left-bottom">
+						<form>
+							<button
+								class="menu-button-small clickable"
+								type="submit"
+								formaction="3.html"
+							>
+								<h6>Next &gt;</h6>
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- Closing the sidebar div -->
+
+				<div class="item gap-left"></div>
+
+				<div
+					class="item content-center"
+					style="
+						background-image: url('Web/page012.jpg');
+						background-size: contain;
+						background-position: left;
+						background-attachment: local;
+						background-repeat: no-repeat;
+						background-color: #000000;
+					"
+				>
+					<div class="center-items">
+						<!-- Buttons -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6>Favorite Sweets Introduction</h6>
+						</button>
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio2-0', 'text2-0', 'play2-0')"
+							style="position: absolute; top: 13vw; left: 89vw"
+						>
+							<img
+								id="play2-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6>Hometown Sweets Introduction</h6>
+						</button>
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio3-1', 'text3-1', 'play3-1')"
+							style="position: absolute; top: 21vw; left: 89vw"
+						>
+							<img
+								id="play3-1"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6>Sweets Gallery</h6>
+						</button>
+
+						<!-- Modal Text -->
+
+						<div class="items hidden-text" id="text1-0">
+							<!-- Modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+									<span
+										class="close clickable"
+										onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+										>&times;</span
+									>
+									<span
+										class="modal-play clickable"
+										onClick="PlaySound('audio1-0', 'play1-0')"
+										><img
+											id="play1-0"
+											class="audio-button-image clickable"
+											src="nav-images/play-g79150a13d_1280.png"
+									/></span>
+								</div>
+
+								<div class="modal-body">
+									<h3>Dai 2's Favorite Sweets</h3>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										In the summer, people love to eat sweets and candies. They
+										are very popular at festivals during this time of year. Most
+										of these sweets and candies you can find at you local
+										convenience store. In the gallery are some of Dai 2 Junior
+										High School’s favorite sweets.
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										Some candies and sweets are well known in Japan and America,
+										like Haribo gummies, Oreos, and KitKats. However in Japan
+										there are matcha flavored KitKats while in America there is
+										only a chocolate flavor.
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										What do the students say about sweets?
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										Seiji says, “I like donuts because they are very soft.”
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										Rino says, “I like strawberry chocolates because they are
+										delicious.”
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										Krisha says, “I like pancakes because they are sweet.”
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										How about you? What do you think about sweets?
+									</p>
+								</div>
+								<div class="modal-footer"></div>
+							</div>
+						</div>
+
+						<div class="items hidden-text" id="text2-0">
+							<!-- Modal content -->
+							<div class="modal-content">
+								<div class="modal-header">
+									<span
+										class="close clickable"
+										onClick="ResetPlayAndShow('audio2-0', 'text2-0', 'play2-0')"
+										>&times;</span
+									>
+									<span
+										class="modal-play clickable"
+										onClick="PlaySound('audio2-0', 'play2-0')"
+										><img
+											id="play2-0"
+											class="audio-button-image clickable"
+											src="nav-images/play-g79150a13d_1280.png"
+									/></span>
+								</div>
+
+								<div class="modal-body">
+									<h3>Hometown Sweets</h3>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										These days, we can get sweets from other countries in Japan,
+										such as halo-halo from the Philippines. But there are still
+										many sweets that we can’t get here.
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										Bannister misses a lot of sweets. He really likes the sweet
+										and unique Ju-Mui Pops from Hawaii.
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										David misses licorice. It has a powerful taste, so “you need
+										time to love it,” but some Japanese people say “it tastes
+										like tires.”
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										Alice likes <i>pufuleti</i>, or Romanian corn puffs. Her
+										husband said, “They’re so bad. Give me more!”
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										Melinda likes <i>pastillas de leche</i>, or milk candies.
+										They are milky and chewy.
+									</p>
+									<p
+										style="
+											font-size: 3vh;
+											text-align: left;
+											text-indent: 0.9vw;
+											margin: 1vh;
+											padding: 1vh;
+										"
+									>
+										The world is full of delicious things. If you get the
+										chance, please travel around the world and try some of them!
+									</p>
+								</div>
+								<div class="modal-footer"></div>
+							</div>
+						</div>
+
+						<div class="items hidden-text" id="text3-1">
+							<!-- Modal content -->
+							<div class="modal-content-slideshow">
+								<div class="modal-header">
+									<span
+										class="close clickable"
+										onClick="ResetPlayAndShow('audio3-1', 'text3-1', 'play3-1')"
+										>&times;</span
+									>
+								</div>
+
+								<div class="modal-body">
+									<!-- Add the image slideshow here -->
+									<div id="slideshow-container" class="slideshow-container">
+										<!-- Full-width images with number text -->
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/1/blackthunder.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Black Thunder"
+												/>
+												<div class="caption-container">
+													<h4>Black Thunder</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Black Thunder is a crunchy chocolate candy bar from
+														Japan.
+													</p>
+													<div class="numbertext">1 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/1/gummies.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Haribo Gummies"
+												/>
+												<div class="caption-container">
+													<h4>Haribo Gummies</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Haribo gummies are chewy gummy bears from Germany.
+													</p>
+													<div class="numbertext">2 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/1/oreos.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="oreos"
+												/>
+												<div class="caption-container">
+													<h4>Oreos</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Oreos are made from white cream sandwiched between
+														two dark cookies. They are from the USA.
+													</p>
+													<div class="numbertext">3 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/1/parfait.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Parfaits"
+												/>
+												<div class="caption-container">
+													<h4>Parfaits</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Parfaits are originally from France (In French,
+														<i>parfait</i> means "perfect"). French parfaits are
+														like custard cakes and are made from sugar, eggs,
+														and cream. American parfaits are made from layers of
+														ice cream, fruit, and other delicious fillings.
+													</p>
+													<div class="numbertext">4 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/1/pretzels.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Chocolate Pretzels"
+												/>
+												<div class="caption-container">
+													<h4>Chocolate Pretzels</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Pretzels are salty ropes of bread, but chocolate
+														pretzels are crunchy biscuits under a candy shell.
+														They were first made in Hamburg, Germany, by Herr
+														Franz Joseph Liebniz in 1544.
+													</p>
+													<div class="numbertext">5 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="Web/1/chupachups.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Chupa Chups"
+												/>
+												<div class="caption-container">
+													<h4>Chupa Chups</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Chupa Chups are a brand of lollipops from Spain.
+														Enric Bernat, their creator, put caramel on a stick
+														to help kids keep their hands clean while eating.
+													</p>
+													<div class="numbertext">6 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/1/crepe.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Crepes"
+												/>
+												<div class="caption-container">
+													<h4>Crepes</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														In Japan, crepes are sweet, but in France, where
+														they were first made, crepes can be sweet or savory
+														(salty or spicy and with meat or vegetables).
+													</p>
+													<div class="numbertext">7 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/1/milky.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Milky"
+												/>
+												<div class="caption-container">
+													<h4>Milky</h4>
+													<p style="font-size: 3vh; line-height: 2">
+														Milky is a chocolate bar with a milk filling from Japan.
+													</p>
+													<div class="numbertext">8 / 8 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/2/jumuipops.png"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Ju-Mui Pops"
+												/>
+												<div class="caption-container">
+													<h4>Ju-Mui Pops</h4>
+													<p style="font-size: 3vh; line-height: 1.5">
+														Ju-Mui Pops are from Bannister's home state of
+														Hawaii in the USA. Ju-Mui Pops are a mix of Chinese
+														and American culture. They have <i>li hing mui</i>,
+														or <i>hoshiume</i> (like <i>umeboshi</i>) inside a
+														fruit juice popsicle.
+													</p>
+													<div class="numbertext">1 / 7 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/2/licorice.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Black Licorice"
+												/>
+												<div class="caption-container">
+													<h4>Licorice</h4>
+													<p style="font-size: 2.7vh; line-height: 1.5">
+														Licorice is a candy made from the licorice plant. It
+														tastes a little like medicine and you should not eat
+														too much of it. David likes it, but the flavor is
+														strong and the candy feels a little like rubber.
+														Originally from England, most licorice candy is
+														sweet, but some are salty. There is also red
+														licorice, which does not contain any licorice plant,
+														and comes in many fruit flavors.
+													</p>
+													<div class="numbertext">2 / 7 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/2/pastillas.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Pastillas de Leche"
+												/>
+												<div class="caption-container">
+													<h4>Pastillas de Leche</h4>
+													<p style="font-size: 3vh; line-height: 1.5">
+														<i>Pastillas de Leche</i> are a very chewy milk
+														candy from the Philippines, where Melinda is from.
+														The first <i>pastillas de leche</i> were made from
+														<i>carabao</i> (water buffalo) milk and
+														<i>calamansi</i> (the Philippine lemon) juice. They
+														are made by boiling the milk with sugar and lemon
+														juice for a very long time. Now there are soft and
+														hard versions of <i>pastillas</i> with many added
+														flavors, including durian and peanut.
+													</p>
+													<div class="numbertext">3 / 7 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/2/reeses.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Reese's Peanut Butter Cups"
+												/>
+												<div class="caption-container">
+													<h4>Reese's Peanut Butter Cups</h4>
+													<p style="font-size: 3vh; line-height: 1.5">
+														<i>Reese's Peanut Butter Cups</i> are a chocolate
+														candy from the USA. Sweet peanut butter is put in a
+														chocolate cup. It's delicious. Ms. Tsubuko from
+														Sakai Kita Junior High says it's perfect with a cup
+														of black coffee. They're one of David's (and
+														George's) favorite candies.
+													</p>
+													<div class="numbertext">4 / 7 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/2/gobstopper.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Willy Wonka's Everlasting Gobstoppers"
+												/>
+												<div class="caption-container">
+													<h4>Willy Wonka's Everlasting Gobstoppers</h4>
+													<p style="font-size: 2.7vh; line-height: 1.5">
+														<i>Willy Wonka's Everlasting Gobstoppers</i> are a
+														candy created by the great British author Roald Dahl
+														in
+														<a
+															href="https://simple.wikipedia.org/wiki/Charlie_and_the_Chocolate_Factory"
+															target="WillyWonka"
+															style="color: #ffef39"
+															><i>Charlie and the Chocolate Factory</i></a
+														>. It's a huge hard candy with many layers of
+														flavors that takes a long, long time to eat, and the
+														purpose of the candy is "to stop a mouth (from
+														talking)." In the USA, they're known as
+														<i>jawbreakers</i> because they are so big and hard.
+														They're one of Bannister's favorite candies.
+													</p>
+													<div class="numbertext">5 / 7 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/2/pufuleti.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Pufuleti"
+												/>
+												<div class="caption-container">
+													<h4>Pufuleti</h4>
+													<p style="font-size: 3vh; line-height: 1.5">
+														<i>Pufuleti</i> are crunchy puffed corn snacks from
+														Alice's home country of Romania. Many countries have
+														their own corn snacks, including <i>Fritos</i> in
+														the USA and Tohato's <i>Caramel Corn</i> in Japan.
+														When Alice's husband first ate <i>pufuleti</i>, he
+														said, "まずい！もっとちょうだい。"
+													</p>
+													<div class="numbertext">6 / 7 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="mySlides">
+											<div class="slide-content">
+												<img
+													src="/Web/2/cherryripe.jpg"
+													class="slide-image"
+													style="height: 90vh; object-fit: cover"
+													alt="Cherry Ripe Bars"
+												/>
+												<div class="caption-container">
+													<h4>Cherry Ripe Bars</h4>
+													<p style="font-size: 3vh; line-height: 1.5">
+														Cherry Ripe bars are made of cherry-flavored coconut
+														filling coated in dark chocolate. They are from
+														Ryan's home country of Australia. They were first
+														made in 1924, one hundred years ago!
+													</p>
+													<div class="numbertext">7 / 7 (15)</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Navigation buttons -->
+										<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+										<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+										<br />
+									</div>
+									<div class="modal-footer"></div>
+
+									<!-- Thumbnails -->
+									<div class="thumbnail-container">
+										<img
+											class="thumbnail"
+											src="Web/1/blackthunder.jpg"
+											alt="Black Thunder"
+											onclick="currentSlide(1)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/1/gummies.jpg"
+											alt="Haribo Gummies"
+											onclick="currentSlide(2)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/1/oreos.jpg"
+											alt="Oreos"
+											onclick="currentSlide(3)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/1/parfait.jpg"
+											alt="Parfait"
+											onclick="currentSlide(4)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/1/pretzels.jpg"
+											alt="Chocolate Pretzels"
+											onclick="currentSlide(5)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/1/chupachups.jpg"
+											alt="Chupa Chups"
+											onclick="currentSlide(6)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/1/crepe.jpg"
+											alt="Crepes"
+											onclick="currentSlide(7)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/1/milky.jpg"
+											alt="Milky"
+											onclick="currentSlide(8)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/2/jumuipops.png"
+											alt="Ju-Mui Pops"
+											onclick="currentSlide(9)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/2/licorice.jpg"
+											alt="Black Licorice"
+											onclick="currentSlide(10)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/2/pastillas.jpg"
+											alt="Pastillas de Leche"
+											onclick="currentSlide(11)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/2/reeses.jpg"
+											alt="Reese's Peanut Butter Cups"
+											onclick="currentSlide(12)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/2/gobstopper.jpg"
+											alt="Willy Wonka's Everlasting Gobstoppers"
+											onclick="currentSlide(13)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/2/pufuleti.jpg"
+											alt="Pufuleti"
+											onclick="currentSlide(14)"
+										/>
+										<img
+											class="thumbnail"
+											src="Web/2/cherryripe.jpg"
+											alt="Cherry Ripe Bars"
+											onclick="currentSlide(15)"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<!-- Audio -->
+
+							<audio id="audio1-0" class="playondemand">
+								<source src="./audio/audio2-1.mp3" type="audio/mp3" />
+							</audio>
+							<audio id="audio2-0" class="playondemand">
+								<source src="./audio/audio2-2.mp3" type="audio/mp3" />
+							</audio>
+							<audio id="audio3-1" class="playondemand">
+								<source src="./audio/audio2-3.mp3" type="audio/mp3" />
+							</audio>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Closing the container div -->
+		</div>
+		<!-- Closing the viewport div -->
+
+		<script type="text/javascript" src="scripts-slideshow.js"></script>
+	</body>
+</html>
