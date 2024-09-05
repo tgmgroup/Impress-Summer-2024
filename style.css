@@ -1,9 +1,18 @@
 /* Paste the @import rule for the Google Font here */
-@import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Sans+JP:wght@100&display=swap");
+
 @font-face {
 	font-family: "Klee One"; /* This is the name you'll use to refer to the font */
 	src: url("font/kleeone_regular.ttf") format("truetype"); /* Adjust the path and format as needed */
 }
+
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('font/NotoSansJP-VariableFont_wght.ttf') format('truetype'); /* Adjust the path as needed */
+    font-weight: 100; /* Specify that this is the Thin style */
+    font-style: normal; /* Specify the normal style */
+}
+
 
 /* Media query for landscape orientation */
 @media screen and (orientation: landscape) {
@@ -460,8 +469,19 @@ a.button {
 }
 
 .credit-text {
-	font-size: 1vw;
+	font-size: 1.1vw;
 	color: white;
+	text-indent: 1vh;
+
+}
+.credit-text-small {
+	font-size: 1vh;
+	color: white;
+	font-family: "Noto Sans JP";
+	margin-left: 0.3vh;
+	text-indent: -0.3vh;
+	line-height: 1.2;
+	
 }
 
 /*
